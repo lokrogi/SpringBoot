@@ -1,0 +1,34 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+</head>
+
+<body>
+
+<div align="right">
+    <form action="/logout">
+        <input type="submit" value="Log Out">
+    </form>
+</div>
+
+<table>
+    <tr>Firstname</tr>
+    <tr>Lastname</tr>
+    <tr>Phone Number</tr>
+    <tr>Email</tr>
+
+
+    <tr th:each="contact : ${contacts}">
+        <td th:text="${contact.firstname}">Firstname</td>
+        <td th:text="${contact.lastname}">Lastname</td>
+        <td th:text="${contact.phoneNumber}">Phone</td>
+        <td th:text="${contact.email}">Email</td>
+    </tr>
+
+</table>
+
+
+
+</body>
+
+</html>
